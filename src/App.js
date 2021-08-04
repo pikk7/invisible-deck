@@ -118,7 +118,7 @@ function App() {
     }
     setCardString("card" + numbToPic(last) + image);
     setTimeout(() => {
-      setState({ ...state, success: true });
+      setState({ ...state, success: true, isLoading: false });
     }, 1000);
   };
 
