@@ -1,6 +1,6 @@
 import "./App.css";
 import PatternLock from "react-pattern-lock";
-import { useState } from "react";
+import React, { useState } from "react";
 import Card2S from "./img/2S.png";
 import Card2H from "./img/2H.png";
 import Card2C from "./img/2C.png";
@@ -549,7 +549,7 @@ function App() {
   return (
     <>
       {!state.success && (
-        <div className="center">
+        <div className="pattern">
           <PatternLock
             size={state.size}
             onChange={onChange}
@@ -571,12 +571,7 @@ function App() {
       {state.success && (
         <>
           {returnCompinents(cardString)}
-          {/* <button
-            style={{ margin: "0 auto", display: "block" }}
-            onClick={onReset}
-          >
-            Click here to reset
-          </button> */}
+
         </>
       )}
     </>
